@@ -1,0 +1,8 @@
+.box{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.5em;
+}
+h3{
+    color: black;
+}

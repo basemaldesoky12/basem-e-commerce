@@ -1,0 +1,145 @@
+<section style="margin-top: 10%;">
+    <div class="py-5">
+        <div class="container">
+          <div class="row hidden-md-up">
+            <div class="col-md-4">
+                <div class="card p-4" style="width: 18rem;">
+                    <div class="card-body">
+                      <h3 class="card-title">{{totalProducts}} Products</h3>
+                      <h4 class="card-subtitle mb-2 text-muted">In total</h4>
+                      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                      <a routerLink="/viewProductsAdmin" class="btn btn-primary card-link">View All Products </a>
+                      <!-- <a href="#" class="card-link">Another link</a> -->
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4" style="width: 18rem;">
+                    <div class="card-body">
+                      <h3 class="card-title">{{totalCustomers}} Customers</h3>
+                      <h4 class="card-subtitle mb-2 text-muted">In total</h4>
+                      <!--   -->
+                      <a routerLink="/viewallcustomers" class=" btn btn-primary card-link">View All Customers </a>
+                      
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4" style="width: 18rem;">
+                    <div class="card-body">
+                      <h3 class="card-title">{{totalCategories}} Categories</h3>
+                      <h4 class="card-subtitle mb-2 text-muted">In total</h4>
+                      <a routerLink="#" class=" btn btn-primary card-link">View All Categories </a>
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <br>
+          <br>
+          <br>
+          <div class="float-left">
+            <h3> Latest products added </h3>
+          </div>
+          <br>
+          <br>
+          <div class=" table-responsive">
+
+            <table class="table table-striped custom-table">
+              <thead style="font: 400 24px/32px Roboto,Helvetica Neue, sans-serif;
+              letter-spacing: normal;
+              margin: 0 0 16px;">
+                <tr style="font: 400 24px/32px Roboto,Helvetica Neue, sans-serif;
+                letter-spacing: normal;
+                margin: 0 0 16px;">
+                
+                    <th scope="col">id</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Product description</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Stock</th>
+                    <!-- <th>
+                        <div class="ml-4"> <button type="button" class="btn btn-secondary " 
+                          >Create New Question bank</button></div></th> -->
+                 </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let product of latestProducts">
+                    <td>
+                      {{product.product_id}}
+                    </td>
+                    <td>
+                      {{product.product_name}}
+                    </td>
+                    <td>
+                        {{product.product_description}}
+                    </td>
+                    <td>
+                     {{product.price}}$
+                  </td>
+                  <td>
+                    {{product.stock}}
+                  </td>
+                  </tr>
+              </tbody>
+              </table>
+            </div>
+            <br>
+            <br>
+            <div class="float-left">
+                <h3> Latest Customers Registered </h3>
+              </div>
+              <br>
+              <br>
+              <div class=" table-responsive">
+    
+                <table class="table table-striped custom-table">
+                  <thead style="font: 400 24px/32px Roboto,Helvetica Neue, sans-serif;
+                  letter-spacing: normal;
+                  margin: 0 0 16px;">
+                    <tr style="font: 400 24px/32px Roboto,Helvetica Neue, sans-serif;
+                    letter-spacing: normal;
+                    margin: 0 0 16px;">
+                    
+                        <th scope="col">id</th>
+                        <th scope="col">Customer email</th>
+                        <th scope="col">Customer name</th>
+                        <th scope="col">address</th>
+                        <th scope="col">city</th>
+                        <th scope="col">phone</th>
+                        <th scope="col">postCode</th>
+
+                        <!-- <th>
+                            <div class="ml-4"> <button type="button" class="btn btn-secondary " 
+                              >Create New Question bank</button></div></th> -->
+                     </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let customer of latestCustomers">
+                        <td>
+                          {{customer.customer_id}}
+                        </td>
+                        <td>
+                          {{customer.customer_email}}
+                        </td>
+                        <td>
+                            {{customer.customer_first_name}} {{customer.customer_last_name}}
+                        </td>
+                        <td>
+                         {{customer.address}}
+                      </td>
+                      <td>
+                       {{customer.city}}
+                      </td>
+                      <td>
+                        {{customer.phone}}
+                      </td>
+                      <td>
+                        {{customer.postcode}}
+                      </td>
+                      </tr>
+                  </tbody>
+                  </table>
+                </div>
+        </div>
+    </div>
+</section>

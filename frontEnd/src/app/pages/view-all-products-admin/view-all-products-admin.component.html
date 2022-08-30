@@ -1,0 +1,71 @@
+<!-- <br>
+<br>
+<br> -->
+  
+ <div  style="margin-top:13%; " class="container">
+    <div class=" table-responsive">
+
+        <table class="table table-striped custom-table">
+          <thead style="font: 400 24px/32px Roboto,Helvetica Neue, sans-serif;
+          letter-spacing: normal;
+          margin: 0 0 16px;">
+            <tr style="font: 400 24px/32px Roboto,Helvetica Neue, sans-serif;
+            letter-spacing: normal;
+            margin: 0 0 16px;">
+            
+                <th scope="col">id</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Product description</th>
+                <th scope="col">Price</th>
+                <th scope="col">Stock</th>
+                <th>
+                    <div class="ml-4"> <button type="button" class="btn btn-primary " (click)="open()"
+                      >Create New Product</button></div></th>
+             </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+                <td>
+                  {{product.product_id}}
+                </td>
+                <td>
+                  {{product.product_name}}
+                </td>
+                <td>
+                    {{product.product_description}}
+                </td>
+                <td>
+                 {{product.price}}$
+              </td>
+              <td>
+                {{product.stock}}
+              </td>
+              </tr>
+          </tbody>
+          </table>
+        </div>
+</div>
+<!-- <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">New Question Bank</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="productForm" (ngSubmit)="createProduct()" >
+        <div class="form-group">
+          <label for="firstname">Question Bank Name </label>
+          <div class="input-group">
+            <input formControlName="QuestionBankName" class="form-control" >
+          </div>
+          <div class="input-group modal-footer">
+            <button class="btn btn-primary btn-lg text-light btn-block" type="submit" (click)="modal.dismiss('Cross click')">Create</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+    </div>
+  </ng-template> -->
+  

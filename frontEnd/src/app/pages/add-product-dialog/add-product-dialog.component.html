@@ -1,0 +1,33 @@
+<div class="container " >
+<form  [formGroup]="productForm" (ngSubmit)="createProduct()" >
+    <div class="form-group">
+      <label style="color: black;" for="firstname">Product Name </label>
+      <div class=" w-50 input-group">
+        <input formControlName="productName" class="form-control w-50" >
+      </div>
+      <label style="color: black;" for="firstname">Product Description </label>
+      <div class=" w-50 input-group">
+        <input formControlName="productDescription" class="form-control" >
+      </div>
+      <label style="color: black;" for="firstname">Price </label>
+      <div class="w-50 input-group">
+        <input formControlName="price" class="form-control" >
+      </div>
+      <label style="color: black;" for="firstname">Stock </label>
+      <div class="w-50 input-group">
+        <input formControlName="stock" class="form-control" >
+      </div>
+      <label style="color: black;" for="firstname">CategoryID </label>
+      <div class="w-50 input-group">
+        <input formControlName="categoryID" class="form-control" >
+      </div>
+      <label style="color: black;"> Upload Image</label>
+      <div class="w-50 input-group">
+        <input type="file" class="form-control" (change)="onFileSelected($event)" >
+      </div>
+      <div class="input-group modal-footer">
+        <button class="btn btn-primary btn-lg text-light btn-block" type="submit" (click)="onClose(); " >Create</button>
+      </div>
+    </div>
+  </form>
+</div>

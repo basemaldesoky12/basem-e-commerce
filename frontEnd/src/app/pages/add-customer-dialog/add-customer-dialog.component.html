@@ -1,0 +1,42 @@
+<div class=" d-flex justify-content-end">
+    <button class=" btn-dialog-close "  (click)="onClose()" >X</button>
+    </div>
+<form class="row g-3" [formGroup]="addCustomerForm" (ngSubmit)="addCustomer()">
+    <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">First Name</label>
+        <input formControlName="firstName" type="text" class="form-control" id="inputEmail4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Last Name</label>
+        <input formControlName="lastName" type="text" class="form-control" id="inputPassword4">
+      </div>
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input formControlName="email" type="email" class="form-control" id="inputEmail4">
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <input formControlName="password" type="password" class="form-control" id="inputPassword4">
+    </div>
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Address</label>
+      <input formControlName="address" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    </div>
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">City</label>
+      <input formControlName="city" type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">PhoneNumber</label>
+      <input formControlName="phone" type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">PostCode</label>
+      <input formControlName="postCode" type="text" class="form-control" id="inputZip">
+    </div>
+    <div class="col-12">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary" (click)="onClose()">Add Customer</button>
+    </div>
+  </form>
