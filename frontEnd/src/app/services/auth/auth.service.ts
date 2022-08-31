@@ -61,6 +61,11 @@ loggedIn() : boolean
     const token = localStorage.getItem('token')! 
     return !this.helper.isTokenExpired(token)
   }
+  adminLoggedIn() : boolean 
+  {
+    const token = localStorage.getItem('adminToken')! 
+    return !this.helper.isTokenExpired(token)
+  }
 logout()
   {
     localStorage.removeItem('token');

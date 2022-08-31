@@ -35,6 +35,8 @@ login()
   this.auth.login(this.loginForm.value).subscribe((res:any)=>{
     console.log(res)
     this.router.navigate(['/home'])
+  },err=>{
+    console.log(err)
   })
 }
 }
