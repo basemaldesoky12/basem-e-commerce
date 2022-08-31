@@ -43,11 +43,12 @@ export class CartComponent implements OnInit {
   quantityValue(event : any)
   {
     this.quantity=event.target.value
+    this.price=this.quantity*this.productInfo[0].price
   }
-  calculatePrice()
-  {
-     this.price= this.quantity*this.productInfo[0].price
-  }
+  // calculatePrice()
+  // {
+  //    this.price= this.quantity*this.productInfo[0].price
+  // }
   // openDialog()
   // {
   //   const dialogConfig= new MatDialogConfig();

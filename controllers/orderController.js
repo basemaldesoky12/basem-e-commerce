@@ -49,6 +49,24 @@ subtotal : subtotal})
 .then((result)=>{
     response.status(200)
     .json('order details added')
+    client.db.select('stock')
+    .from('products')
+    .where({product_id : pid})
+    .then((resultedStock)=>{
+        console.log('selected')
+       client.db('products')
+       .update({
+        stock : resultedStock[0].stock-quantity
+       })
+       .where({product_id : pid})
+       .then(()=>{
+        console.log('updated')
+       }).catch((error)=>{
+        console.log('cannot update',error)
+       })
+    }).catch((error)=>{
+        console.log('cannot perform select')
+    })
 }).catch((err)=>{
     console.log(err)
     response.status(500)
